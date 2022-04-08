@@ -410,11 +410,11 @@
                 <h2 id="how-it-works">How it works</h2>
 <p>This MODX extra checks the context key of the saved or duplicated resource
 against a comma separated list in the <code>writable_contexts</code> system/usergroup/user
-setting. The resource can't be saved in a disallowed context. If the resource is
-duplicated in a disallowed context, it is moved to the root of the first
+setting. The resource can only be saved in an writable context. If the resource is
+duplicated in a not writable context, it is moved to the root of the first
 writable context. The MODX extra moves also resources duplicated with Babel.</p>
 <h2 id="system-settings">System Settings</h2>
-<p>ContextKeeper uses the following system settings in the namespace <code>emo</code>:</p>
+<p>ContextKeeper uses the following system settings in the namespace <code>contextkeeper</code>:</p>
 <table>
 <thead>
 <tr>
