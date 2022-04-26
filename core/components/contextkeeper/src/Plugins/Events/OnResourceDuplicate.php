@@ -17,11 +17,16 @@ class OnResourceDuplicate extends Plugin
         /** @var modResource $newResource */
         $newResource = $this->modx->getOption('newResource', $this->scriptProperties);
         $writableContexts = $this->contextkeeper->getOption('writableContexts');
+
         if (!in_array($newResource->get('context_key'), $writableContexts)) {
             if (!empty($writableContexts)) {
                 $newResource->set('context_key', reset($writableContexts));
                 $newResource->set('parent', 0);
-                $message = $this->modx->lexicon('contextkeeper.err_move_nv', ['id' => $newResource->get('id'), 'context_key' => $newResource->get('context_key')]);
+                $message = $this->modx->lexicon('contextkeeper.err_move_nv', [
+                    'id' => $newResource->get('id'),
+                    'context_key' => $newResource->get('context_key'),
+                    'context_name' => $this->contextkeeper->getContextName($newResource->get('context_key'))
+                ]);
                 if ($this->contextkeeper->getOption('debug')) {
                     $this->modx->log(xPDO::LOG_LEVEL_ERROR, $message, '', 'ContextKeeper OnResourceDuplicate');
                 }

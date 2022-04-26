@@ -39,7 +39,7 @@ class ContextKeeper
      * The version
      * @var string $version
      */
-    public $version = '1.0.0-rc1';
+    public $version = '1.0.0';
 
     /**
      * The class options
@@ -85,7 +85,7 @@ class ContextKeeper
             'connectorUrl' => $assetsUrl . 'connector.php'
         ], $options);
 
-        $writableContexts = $this->modx->getOption('writable_contexts', null, '');
+        $writableContexts = $this->modx->getOption('contextkeeper.writable_contexts', null, '');
         $writableContexts = ($writableContexts) ? array_map('trim', explode(',', $writableContexts)) : [];
 
         // Add default options
@@ -122,5 +122,19 @@ class ContextKeeper
             }
         }
         return $option;
+    }
+
+    /**
+     * @param $key
+     * @return string
+     */
+    public function getContextName($key)
+    {
+        $context = $this->modx->getContext($key);
+        if ($context) {
+            return $context->get('name');
+        } else {
+            return $this->modx->lexicon('contextkeeper.err_unknown_context');
+        }
     }
 }

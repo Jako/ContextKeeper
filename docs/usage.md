@@ -7,6 +7,9 @@ context. If the resource is duplicated in a not writable context, it is moved to
 the root of the first writable context. The MODX extra moves also resources
 duplicated with Babel.
 
+That way non-writable contexts can remain visible for all users, while they are
+unable to edit the content.
+
 ## System Settings
 
 ContextKeeper uses the following system settings in the namespace `contextkeeper`:

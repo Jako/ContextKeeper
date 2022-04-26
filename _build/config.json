@@ -3,17 +3,19 @@
   "lowCaseName": "contextkeeper",
   "description": "Avoid saving resources in the wrong context",
   "author": "Thomas Jakobi",
-  "version": "1.0.0-rc1",
+  "version": "1.0.0",
   "package": {
     "elements": {
       "plugins": [
         {
-          "name": "contextkeeper",
+          "name": "ContextKeeper",
           "description": "Avoid saving resources in the wrong context",
           "file": "contextkeeper.plugin.php",
           "events": [
             "OnBabelDuplicate",
+            "OnBeforeDocFormDelete",
             "OnBeforeDocFormSave",
+            "OnResourceBeforeSort",
             "OnResourceDuplicate"
           ]
         }

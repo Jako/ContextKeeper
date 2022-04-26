@@ -14,5 +14,7 @@ resources than the user is allowed to edit.
 
 * Check for writable contexts in system/usergroup/user settings.
 * Disallow saving ressources in not writable contexts.
+* Disallow deleting ressources in not writable contexts.
+* Disallow moving ressources from/in/to not writable contexts.
 * Move duplicated resources to the first writable context.
 * Move duplicated Babel resources to the first writable context.
