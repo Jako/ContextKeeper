@@ -3,7 +3,7 @@
   "lowCaseName": "contextkeeper",
   "description": "Avoid saving resources in the wrong context",
   "author": "Thomas Jakobi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "package": {
     "elements": {
       "plugins": [
@@ -15,6 +15,9 @@
             "OnBabelDuplicate",
             "OnBeforeDocFormDelete",
             "OnBeforeDocFormSave",
+            "OnDocFormPrerender",
+            "OnDocPublished",
+            "OnDocUnPublished",
             "OnResourceBeforeSort",
             "OnResourceDuplicate"
           ]
@@ -30,6 +33,12 @@
       },
       {
         "key": "check_empty",
+        "type": "combo-boolean",
+        "area": "system",
+        "value": "0"
+      },
+      {
+        "key": "disable_duplicate_button",
         "type": "combo-boolean",
         "area": "system",
         "value": "0"

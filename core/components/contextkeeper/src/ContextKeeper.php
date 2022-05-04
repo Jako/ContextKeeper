@@ -39,7 +39,7 @@ class ContextKeeper
      * The version
      * @var string $version
      */
-    public $version = '1.0.0';
+    public $version = '1.0.1';
 
     /**
      * The class options
@@ -92,6 +92,7 @@ class ContextKeeper
         $this->options = array_merge($this->options, [
             'debug' => (bool)$this->getOption('debug', $options, false),
             'checkEmpty' => (bool)$this->getOption('check_empty', $options, false),
+            'disableDuplicateButton' => (bool)$this->getOption('disable_duplicate_button', $options, false),
             'writableContexts' => $writableContexts,
         ]);
 

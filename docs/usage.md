@@ -18,6 +18,7 @@ Setting | Description | Default
 ------- | ----------- | -------
 contextkeeper.check_empty | Test the write restriction, even if the the system/usergroup/user setting `writable_contexts` is empty. | No
 contextkeeper.debug | Log debug information in the MODX error log. | No
+contextkeeper.disable_duplicate_button | Disable the duplicate button in resources of not writable contexts. | No
 contextkeeper.writable_contexts | Comma separated list of writable context keys. | -
 
 As always, these system settings can be overridden by user group and user
