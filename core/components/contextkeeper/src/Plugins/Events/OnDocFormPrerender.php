@@ -33,6 +33,10 @@ class OnDocFormPrerender extends Plugin
         if (saveBtn) {
             saveBtn.setDisabled(true);
         }
+        var deleteBtn = Ext.getCmp("modx-abtn-delete");
+        if (deleteBtn) {
+            deleteBtn.setDisabled(true);
+        }
     });
 </script>');
             if ($this->contextkeeper->getOption('disableDuplicateButton')) {
