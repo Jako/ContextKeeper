@@ -22,6 +22,7 @@ class OnBabelDuplicate extends Plugin
             if (!empty($writableContexts)) {
                 $duplicateResource->set('context_key', reset($writableContexts));
                 $duplicateResource->set('parent', 0);
+                $duplicateResource->save();
                 $message = $this->modx->lexicon('contextkeeper.err_babel_nv', [
                     'id' => $duplicateResource->get('id'),
                     'context_key' => $duplicateResource->get('context_key'),

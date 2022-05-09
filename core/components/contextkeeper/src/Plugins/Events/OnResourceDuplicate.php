@@ -14,18 +14,19 @@ class OnResourceDuplicate extends Plugin
 {
     public function process()
     {
-        /** @var modResource $newResource */
-        $newResource = $this->modx->getOption('newResource', $this->scriptProperties);
+        /** @var modResource $duplicateResource */
+        $duplicateResource = $this->modx->getOption('newResource', $this->scriptProperties);
         $writableContexts = $this->contextkeeper->getOption('writableContexts');
 
-        if (!in_array($newResource->get('context_key'), $writableContexts)) {
+        if (!in_array($duplicateResource->get('context_key'), $writableContexts)) {
             if (!empty($writableContexts)) {
-                $newResource->set('context_key', reset($writableContexts));
-                $newResource->set('parent', 0);
+                $duplicateResource->set('context_key', reset($writableContexts));
+                $duplicateResource->set('parent', 0);
+                $duplicateResource->save();
                 $message = $this->modx->lexicon('contextkeeper.err_move_nv', [
-                    'id' => $newResource->get('id'),
-                    'context_key' => $newResource->get('context_key'),
-                    'context_name' => $this->contextkeeper->getContextName($newResource->get('context_key'))
+                    'id' => $duplicateResource->get('id'),
+                    'context_key' => $duplicateResource->get('context_key'),
+                    'context_name' => $this->contextkeeper->getContextName($duplicateResource->get('context_key'))
                 ]);
                 if ($this->contextkeeper->getOption('debug')) {
                     $this->modx->log(xPDO::LOG_LEVEL_ERROR, $message, '', 'ContextKeeper OnResourceDuplicate');
@@ -36,7 +37,7 @@ class OnResourceDuplicate extends Plugin
                     if ($this->contextkeeper->getOption('debug')) {
                         $this->modx->log(xPDO::LOG_LEVEL_ERROR, $message, '', 'ContextKeeper OnResourceDuplicate');
                     }
-                    $newResource->remove();
+                    $duplicateResource->remove();
                 }
             }
         }
