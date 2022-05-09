@@ -1,6 +1,6 @@
 # ContextKeeper
 
-Avoid saving resources in the wrong context.
+Prevent resources from being saved in the wrong context.
 
 - Author: Thomas Jakobi <office@treehillstudio.com>
 - License: GNU GPLv2

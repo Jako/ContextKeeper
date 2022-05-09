@@ -1,6 +1,6 @@
 # ContextKeeper
 
-Avoid saving resources in the wrong context.
+Prevent resources from being saved in the wrong context.
 
 ### Requirements
 

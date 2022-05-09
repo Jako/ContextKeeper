@@ -1,6 +1,6 @@
 {
   "name": "contextkeeper",
-  "description": "Avoid saving resources in the wrong context",
+  "description": "Prevent resources from being saved in the wrong context",
   "author": "Thomas Jakobi <office@treehillstudio.com>",
   "private": true,
   "devDependencies": {

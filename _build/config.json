@@ -1,7 +1,7 @@
 {
   "name": "ContextKeeper",
   "lowCaseName": "contextkeeper",
-  "description": "Avoid saving resources in the wrong context",
+  "description": "Prevent resources from being saved in the wrong context",
   "author": "Thomas Jakobi",
   "version": "1.0.3",
   "package": {
@@ -9,7 +9,7 @@
       "plugins": [
         {
           "name": "ContextKeeper",
-          "description": "Avoid saving resources in the wrong context",
+          "description": "Prevent resources from being saved in the wrong context",
           "file": "contextkeeper.plugin.php",
           "events": [
             "OnBabelDuplicate",
