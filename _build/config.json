@@ -64,6 +64,9 @@
     "readme": "docs/readme.md",
     "license": "docs/license.md",
     "changelog": "docs/changelog.md",
+    "setupOptions": {
+      "source": "setup.options.php"
+    },
     "resolver": {
       "after": [
         "resolve.cleanup.php",
