@@ -1,4 +1,4 @@
-[![Default Lexicon](https://hosted.weblate.org/widgets/modx-extras/contextkeeper/standard/svg-badge.svg)](https://hosted.weblate.org/projects/modx-extras/contextkeeper/standard/)
+[![Default Lexicon](https://hosted.weblate.org/widget/modx-extras/contextkeeper/standard/svg-badge.svg)](https://hosted.weblate.org/projects/modx-extras/contextkeeper/standard/)
 
 # ContextKeeper
 
