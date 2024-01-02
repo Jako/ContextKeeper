@@ -1,4 +1,4 @@
-[![Default Lexicon](https://hosted.weblate.org/widgets/modx-extras/-/modx-contextkeeper-standard/svg-badge.svg)](https://hosted.weblate.org/projects/modx-extras/modx-contextkeeper-standard/)
+[![Default Lexicon](https://hosted.weblate.org/widgets/modx-extras/contextkeeper/standard/svg-badge.svg)](https://hosted.weblate.org/projects/modx-extras/contextkeeper/standard/)
 
 # ContextKeeper
 
@@ -29,4 +29,4 @@ The project is licensed under the [GPLv2 license](https://github.com/Jako/Contex
 
 ## Translations
 
-Translations of the package can be made for the [Default Lexicon](https://hosted.weblate.org/projects/modx-extras/modx-contextkeeper-standard/) and the [System Setting Lexicon](https://hosted.weblate.org/projects/modx-extras/modx-contextkeeper-system-settings/)
+Translations of the package can be made for the [Default Lexicon](https://hosted.weblate.org/projects/modx-extras/contextkeeper/standard/) and the [System Setting Lexicon](https://hosted.weblate.org/projects/modx-extras/contextkeeper/system-settings/)
