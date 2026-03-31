@@ -1,6 +1,6 @@
 [project]
 site_name = "ContextKeeper"
-site_description = "Documentation for ContextKeeper, a MODX extra that prevent resources from being saved in the wrong context."
+site_description = "Documentation for ContextKeeper, which makes it easy to prevent MODX resources from being saved in the wrong context."
 site_author = "Treehill Studio"
 site_url = "https://jako.github.io/ContextKeeper/"
 repo_url = "https://github.com/Jako/ContextKeeper/"
@@ -12,6 +12,7 @@ nav = [
     "index.md",
     "installation.md",
     "usage.md",
+    "changelog.md",
     "contributors.md"
 ]
 extra_css = ["assets/stylesheets/treehillstudio.css"]
@@ -68,6 +69,8 @@ link = "https://github.com/Jako"
 emoji_index = "zensical.extensions.emoji.twemoji"
 emoji_generator = "zensical.extensions.emoji.to_svg"
 
+[project.markdown_extensions.footnotes]
+
 [project.markdown_extensions.pymdownx.highlight]
 anchor_linenums = true
 line_spans = "__span"
@@ -76,6 +79,6 @@ pygments_lang_class = true
 [project.markdown_extensions.pymdownx.inlinehilite]
 
 [project.markdown_extensions.pymdownx.snippets]
-base_path = "docs"
+base_path = ["docs", "core"]
 
 [project.markdown_extensions.pymdownx.superfences]
