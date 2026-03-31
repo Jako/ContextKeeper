@@ -26,21 +26,21 @@ pkg.dependencies.forEach(function (dependency, index) {
 const bumpCopyright = function () {
     return gulp.src([
         'core/components/contextkeeper/model/contextkeeper/contextkeeper.class.php',
-        'core/components/contextkeeper/src/ContextKeeper.php',
+        'core/components/contextkeeper/src/ContextKeeper.php'
     ], {base: './'})
         .pipe(replace(/Copyright 2022(-\d{4})? by/g, 'Copyright ' + (year > 2022 ? '2022-' : '') + year + ' by'))
         .pipe(gulp.dest('.'));
 };
 const bumpVersion = function () {
     return gulp.src([
-        'core/components/contextkeeper/src/ContextKeeper.php',
+        'core/components/contextkeeper/src/ContextKeeper.php'
     ], {base: './'})
         .pipe(replace(/version = '\d+\.\d+\.\d+-?[0-9a-z]*'/ig, 'version = \'' + pkg.version + '\''))
         .pipe(gulp.dest('.'));
 };
 const bumpDocs = function () {
     return gulp.src([
-        'mkdocs.yml',
+        'zensical.toml',
     ], {base: './'})
         .pipe(replace(/&copy; 2022(-\d{4})?/g, '&copy; ' + (year > 2022 ? '2022-' : '') + year))
         .pipe(gulp.dest('.'));
