@@ -1,6 +1,7 @@
 {
   "name": "treehillstudio/contextkeeper",
   "description": "Prevent resources from being saved in the wrong context",
+  "version": "1.0.3",
   "authors": [
     {
       "name": "Thomas Jakobi",
